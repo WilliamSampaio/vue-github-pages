@@ -2,7 +2,18 @@
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+      message: import.meta.env.VITE_HELLO_WORLD
+    }
+  }
+}
+</script>
+
 <template>
+  <h1>{{ message }}</h1>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
