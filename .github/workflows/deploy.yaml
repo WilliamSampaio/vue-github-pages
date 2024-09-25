@@ -23,7 +23,7 @@ jobs:
           git config --global user.name $username
       - name: deploy to build
         env:
-          VITE_HELLO_WORLD: ${{ vars.ENV_CONTEXT_VAR }}
+          VITE_HELLO_WORLD: ${{ secrets.VITE_HELLO_WORLD }}
         run: |
           npm i
           NODE_ENV=production npm run build
