@@ -22,6 +22,8 @@ jobs:
           git config --global user.email $email
           git config --global user.name $username
       - name: deploy to build
+        env:
+          VITE_HELLO_WORLD: ${{ VITE_HELLO_WORLD }}
         run: |
           npm i
           NODE_ENV=production npm run build
