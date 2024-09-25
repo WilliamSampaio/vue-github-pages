@@ -11,7 +11,7 @@ export default defineConfig(({ command }) => {
   if (command === 'build') {
     return {
       plugins: [vue()],
-      base: 'https://williamsampaio.github.io/vue-github-pages/'
+      base: 'https://bibliaonline.app.br/'
     }
   }
 })
